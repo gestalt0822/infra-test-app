@@ -4,17 +4,17 @@
 lock '3.6.1'
 
 # デプロイするアプリケーション名
-set :application, infra-test-app
+set :application, 'infra-test-app'
 
 # cloneするgitのリポジトリ
-set :repo_url, git@github.com:gestalt0822/infra-test-app.git
+set :repo_url, 'git@github.com:gestalt0822/infra-test-app.git'
 
 # deployするブランチ。デフォルトはmaster
 # この記載をすることで bundle exec cap production deploy BRANCH=ブランチ名で特定のブランチをデプロイできるようになる
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, /var/www/infra-test-app
+set :deploy_to, '/var/www/infra-test-app'
 
 # シンボリックリンクをはるファイル。(※後述)
 set :linked_files, %w(config/secrets.yml config/database.yml .env)
