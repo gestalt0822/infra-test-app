@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  host: localhost
+  host: infra-test-app-production.cpa2mvsvafbm.ap-northeast-1.rds.amazonaws.com
 
 development:
   <<: *default
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: infra-test-app_production
-  username: infra-test-app
+  database: infra_test_app_production
+  username: aoki
   password: <%= ENV['INFRA-TEST-APP_DATABASE_PASSWORD'] %>
