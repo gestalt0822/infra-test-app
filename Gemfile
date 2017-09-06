@@ -31,6 +31,7 @@ gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'capistrano-maintenance', '~> 1.0', require: false
 end
 
 group :development do
